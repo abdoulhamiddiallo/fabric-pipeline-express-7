@@ -16,17 +16,17 @@ Un pipeline Microsoft Fabric Data Factory que personne ne lance. Un fichier de s
 
 Le pipeline `PL_Dock_Express` après son exécution par le déclencheur : quatre activités vertes, de la variable au message Teams.
 
-![PL_Dock_Express dans Fabric, exécution réussie](images/pipeline_run.png)
+![PL_Dock_Express dans Fabric, exécution réussie](images/ppl3.png)
 
 Le compte rendu publié dans le canal Général à 02:16. Personne n'a cliqué sur Exécuter : le dépôt du fichier de 18 h a suffi, et la fonction Python a écrit la phrase.
 
-![Le compte rendu de la vague de 18 h dans Microsoft Teams](images/teams_message.png)
+![Le compte rendu de la vague de 18 h dans Microsoft Teams](images/teams_ppl.png)
 
 La table `shipments` interrogée dans le point de terminaison SQL du lakehouse, après les trois vagues : 150 colis, 150 identifiants distincts, et la répartition par statut.
 
-![150 colis, 150 identifiants distincts](images/sql_ids.png)
+![150 colis, 150 identifiants distincts](images/ppl2.png)
 
-![La répartition des colis par statut](images/sql_status.png)
+![La répartition des colis par statut](images/ppl1.png)
 
 ## 🎯 Résultats clés
 
@@ -191,10 +191,10 @@ fabric-pipeline-express-7/
 │   └── build_report.py                  la fonction de données utilisateur
 └── images/
     ├── pipeline_diagram.svg             le schéma du pipeline
-    ├── pipeline_run.png                 PL_Dock_Express après l'exécution par le déclencheur
-    ├── teams_message.png                le compte rendu de la vague de 18 h
-    ├── sql_ids.png                      150 colis, 150 identifiants distincts
-    └── sql_status.png                   la répartition par statut
+    ├── ppl1.png                         la répartition des colis par statut
+    ├── ppl2.png                         150 colis, 150 identifiants distincts
+    ├── ppl3.png                         PL_Dock_Express après l'exécution par le déclencheur
+    └── teams_ppl.png                    le compte rendu de la vague de 18 h
 ```
 
 ## 🧰 Stack technique
