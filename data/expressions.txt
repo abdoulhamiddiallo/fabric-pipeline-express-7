@@ -1,0 +1,50 @@
+EXPRESSIONS ET CODE DU GUIDE : copiez-les depuis ce fichier, un bloc entier à la fois.
+Un PDF coupe les lignes longues et ajoute des espaces au copier-coller ; ce fichier n'en ajoute aucun.
+
+=== FN_Dock : fonction de données utilisateur (Python) ===
+
+import fabric.functions as fn
+
+udf = fn.UserDataFunctions()
+
+@udf.function()
+def build_report(fileName: str, rowsRead: int) -> str:
+    stamp = fileName.split("_")[-1].replace(".csv", "")
+    if len(stamp) == 4 and stamp.isdigit():
+        wave = stamp[0:2] + " h " + stamp[2:4]
+    else:
+        wave = stamp
+    if rowsRead >= 115:
+        load = "vague lourde"
+    else:
+        load = "vague normale"
+    return "Quai de Metz, vague de " + wave + " : " + str(rowsRead) + " colis fusionnés dans shipments (" + load + ")."
+
+=== PL_Dock_Express ===
+
+[Paramètre] file_name (String), valeur par défaut
+shipments_2026-10-14_0800.csv
+
+[Pick file] Set variable, variable file
+@coalesce(pipeline()?.TriggerEvent?.FileName, pipeline().parameters.file_name)
+
+[Upsert shipments] Copy data, nom du fichier source
+@{variables('file')}
+
+[Upsert shipments] Copy data, colonne clé
+shipment_id
+
+[Build report] Functions, paramètre fileName
+@variables('file')
+
+[Build report] Functions, paramètre rowsRead
+@activity('Upsert shipments').output.rowsRead
+
+[Post report] Teams, message
+@{activity('Build report').output.output}
+
+=== LH_Dock : point de terminaison SQL ===
+
+SELECT status, COUNT(*) AS colis FROM shipments GROUP BY status ORDER BY status;
+
+SELECT COUNT(*) AS colis, COUNT(DISTINCT shipment_id) AS ids FROM shipments;
