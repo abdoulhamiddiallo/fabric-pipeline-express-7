@@ -1,0 +1,21 @@
+shipment_id,client,destination,weight_kg,status,updated_at
+COL-0018,Cycles Mazelle,Forbach,21.1,LIVRE,2026-10-14 18:24:00
+COL-0019,Fromagerie Taburet,Nancy,14.8,LIVRE,2026-10-14 18:37:00
+COL-0030,Librairie Hisler,Thionville,14.8,LIVRE,2026-10-14 18:16:00
+COL-0039,Cycles Mazelle,Thionville,6.6,LIVRE,2026-10-14 18:04:00
+COL-0046,Boulangerie Saint-Louis,Thionville,2.0,LIVRE,2026-10-14 18:07:00
+COL-0049,Cycles Mazelle,Metz,22.8,LIVRE,2026-10-14 18:04:00
+COL-0056,Pharmacie Serpenoise,Sarreguemines,0.9,LIVRE,2026-10-14 18:25:00
+COL-0062,Epicerie Pontiffroy,Thionville,14.9,LIVRE,2026-10-14 18:23:00
+COL-0067,Cycles Mazelle,Nancy,11.0,LIVRE,2026-10-14 18:12:00
+COL-0079,Epicerie Pontiffroy,Thionville,14.8,LIVRE,2026-10-14 18:55:00
+COL-0085,Cycles Mazelle,Thionville,18.4,LIVRE,2026-10-14 18:45:00
+COL-0087,Boulangerie Saint-Louis,Luxembourg,8.7,LIVRE,2026-10-14 18:23:00
+COL-0088,Epicerie Pontiffroy,Sarreguemines,19.6,LIVRE,2026-10-14 18:27:00
+COL-0095,Boulangerie Saint-Louis,Sarreguemines,1.7,LIVRE,2026-10-14 18:57:00
+COL-0097,Fromagerie Taburet,Sarreguemines,1.1,LIVRE,2026-10-14 18:47:00
+COL-0102,Librairie Hisler,Sarreguemines,21.5,LIVRE,2026-10-14 18:25:00
+COL-0106,Boulangerie Saint-Louis,Thionville,22.6,LIVRE,2026-10-14 18:18:00
+COL-0110,Pharmacie Serpenoise,Thionville,17.1,LIVRE,2026-10-14 18:59:00
+COL-0111,Fromagerie Taburet,Nancy,10.3,LIVRE,2026-10-14 18:59:00
+COL-0115,Librairie Hisler,Sarreguemines,23.1,LIVRE,2026-10-14 18:00:00
